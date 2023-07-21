@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity BCD_ADDER  is
+  port (A3, A2, A1, A0, B3, B2, B1, B0: in std_logic; Y4, Y3, Y2, Y1, Y0: out std_logic);
+end entity BCD_ADDER;
+
+architecture Struct of BCD_ADDER is
+
+	component ADDER_SUBTRACTOR  is
+	  port (A3, A2, A1, A0, B3, B2, B1, B0, M: in std_logic; Cout, S3, S2, S1, S0: out std_logic);
+	end component ADDER_SUBTRACTOR;
+
+	signal s0, s1, s2, s3, s4, s5, s6, s7, s8, s9 : std_logic;
+begin
+	BA1: ADDER_SUBTRACTOR port map (A3 => A3, A2 => A2, A1 => A1, A0 => A0, B3 => B3, B2 => B2, B1 => B1, B0 => B0, M => '0', Cout => s4, S3 => s3, S2 => s2, S1 => s1, S0 => s0);
+	AND1: AND_2 port map (A => s3, B => s2, Y => s5);
+	AND2: AND_2 port map (A => s3, B => s1, Y => s6);
+	OR1: OR_2 port map (A => s5, B => s6, Y => s7);
+	OR2: OR_2 port map (A => s7, B => s4, Y => s8);
+	BA2: ADDER_SUBTRACTOR port map (A3 => s3, A2 => s2, A1 => s1, A0 => s0, B3 => '0', B2 => s8, B1 => s8, B0 => '0', M => '0', Cout => s9, S3 => Y3, S2 => Y2, S1 => Y1, S0 => Y0);
+	OR3: OR_2 port map (A => s9, B => s4, Y => Y4);
+end Struct;

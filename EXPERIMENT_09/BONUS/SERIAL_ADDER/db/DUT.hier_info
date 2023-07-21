@@ -1,0 +1,16 @@
+|DUT
+input_vector[0] => Serial_Adder:add_instance.clock
+input_vector[1] => Serial_Adder:add_instance.b
+input_vector[2] => Serial_Adder:add_instance.a
+input_vector[3] => Serial_Adder:add_instance.reset
+output_vector[0] << Serial_Adder:add_instance.s
+
+
+|DUT|Serial_Adder:add_instance
+reset => s.OUTPUTSELECT
+a => s.IN0
+b => s.IN1
+clock => ~NO_FANOUT~
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+

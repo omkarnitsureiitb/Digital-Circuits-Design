@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity MULTIPLIER  is
+  port (A3, A2, A1, A0, B2, B1, B0: in std_logic; M6, M5, M4, M3, M2, M1, M0: out std_logic);
+end entity MULTIPLIER;
+
+architecture Struct of MULTIPLIER is
+  signal s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11 : std_logic;
+begin
+
+ AND1: AND_2 port map (A => A0, B => B0, Y => M0);
+ AND2: AND_2 port map (A => A1, B => B0, Y => s1);
+ AND3: AND_2 port map (A => A0, B => B1, Y => s2);
+ AND4: AND_2 port map (A => A2, B => B0, Y => s3);
+ AND5: AND_2 port map (A => A1, B => B1, Y => s4);
+ AND6: AND_2 port map (A => A0, B => B2, Y => s5);
+ AND7: AND_2 port map (A => A3, B => B0, Y => s6);
+ AND8: AND_2 port map (A => A2, B => B1, Y => s7);
+ AND9: AND_2 port map (A => A1, B => B2, Y => s8);
+ AND10: AND_2 port map (A => A3, B => B1, Y => s9);
+ AND11: AND_2 port map (A => A2, B => B2, Y => s10);
+ AND12: AND_2 port map (A => A3, B => B2, Y => s11);
+ HA1:	HALF_ADDER port map (A => s1, B => s2, S => M1, C => s12);
+ FA1:	FULL_ADDER port map (A => s3, B => s4, Cin => s12, SUM => s13, Cout => s14);
+ FA2:	FULL_ADDER port map (A => s13, B => s14, Cin => s5, SUM => M2, Cout => s15);
+ FA3:	FULL_ADDER port map (A => s6, B => s7, Cin => s15, SUM => s16, Cout => s17);
+ FA4:	FULL_ADDER port map (A => s16, B => s17, Cin => s8, SUM => M3, Cout => s18);
+ FA5:	FULL_ADDER port map (A => s9, B => s10, Cin => s18, SUM => M4, Cout => s19);
+ HA2:	HALF_ADDER port map (A => s19, B => s11, S => M5, C => M6);
+ 
+ end Struct;

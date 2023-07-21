@@ -1,0 +1,133 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity FSM is
+	port(inp:in std_logic_vector(3 downto 0);
+		  clock:in std_logic;
+	output: out std_logic_vector(4 downto 0));
+end word_detection;
+
+architecture behav of word_detection is
+
+type state is (idle,admin,professor,researcher,student);
+
+signal y_present,y_next: state:=idle;
+
+signal alert : std_logic :='0';
+
+signal counter : integer := 0;
+
+
+state_transition_proc:process(inp,y_present)
+
+begin
+
+if(y_present = idle)then
+			if(inp(3) = '1')then
+				y_present <= admin;
+			elsif(inp(2) = '1')then
+				y_present <= professor;
+			elsif(inp(1) = '1')then
+				y_present <= researcher;
+			elsif(inp(0) = '1')then
+				y_present <= student;
+			else
+				y_present <= idle;
+			end if;
+				
+elsif(y_present = student)then
+			if(inp(3) = '1')then
+				y_present <= admin;
+				alert <= '1';
+			elsif(inp(2) = '1')then
+				y_present <= professor;
+				alert <= '1';
+			elsif(inp(1) = '1')then
+				y_present <= researcher;
+				alert <= '1';
+			elsif(inp(0) = '1')then
+				y_present <= student;
+			else
+				y_present <= idle;
+			end if;
+				
+elsif(y_present = researcher)then
+			if(inp(3) = '1')then
+				y_present <= admin;
+				alert <= '1';
+			elsif(inp(2) = '1')then
+				y_present <= professor;
+				alert <= '1';
+			elsif(inp(1) = '1')then
+				y_present <= researcher;
+			else
+				y_present <= idle;
+			end if;
+				
+elsif(y_present = professor)then
+			if(inp(3) = '1')then
+				y_present <= admin;
+				alert <= '1';
+			elsif(inp(2) = '1')then
+				y_present <= professor;
+			else
+				y_present <= idle;
+			end if;
+				
+elsif(y_present = admin)then
+			if(inp(3) = '1')then
+				y_present <= admin;
+			else
+				y_present <= idle;
+			end if;
+			
+end if;
+
+end process state_transition_proc;
+
+output_proc:process(y_present,alert,clock)
+
+if(alert = '1')then
+	if(clock = '1' and clock'event)then
+		if(counter < 150000000)then
+			counter <= counter + 1;
+			output <= "11111";
+		else
+			alert = '0';
+			counter = '0';
+	else
+
+elsif(y_present = admin)then
+	output <= "01111";
+	
+elsif(y_present = professor)then
+	output <= "00111";
+	
+elsif(y_present = researcher)then
+	output <= "00011";
+	
+elsif(y_present = student)then
+	output <= "00001";
+	
+end process output_proc;
+
+end architecture behav;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

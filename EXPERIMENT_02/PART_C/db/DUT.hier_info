@@ -1,0 +1,221 @@
+|DUT
+input_vector[0] => ENCODER_8_3:add_instance.E
+input_vector[1] => ENCODER_8_3:add_instance.Y0
+input_vector[2] => ENCODER_8_3:add_instance.Y1
+input_vector[3] => ENCODER_8_3:add_instance.Y2
+input_vector[4] => ENCODER_8_3:add_instance.Y3
+input_vector[5] => ENCODER_8_3:add_instance.Y4
+input_vector[6] => ENCODER_8_3:add_instance.Y5
+input_vector[7] => ENCODER_8_3:add_instance.Y6
+input_vector[8] => ENCODER_8_3:add_instance.Y7
+output_vector[0] << ENCODER_8_3:add_instance.A0
+output_vector[1] << ENCODER_8_3:add_instance.A1
+output_vector[2] << ENCODER_8_3:add_instance.A2
+
+
+|DUT|ENCODER_8_3:add_instance
+Y7 => ENCODER_4_2:EN2.A
+Y7 => ENCODER_4_2:EN4.A
+Y6 => ENCODER_4_2:EN2.B
+Y6 => ENCODER_4_2:EN4.B
+Y5 => ENCODER_4_2:EN2.C
+Y5 => ENCODER_4_2:EN4.C
+Y4 => ENCODER_4_2:EN2.D
+Y4 => ENCODER_4_2:EN4.D
+Y4 => OR_2:OR5.B
+Y3 => ENCODER_4_2:EN1.A
+Y3 => ENCODER_4_2:EN3.A
+Y2 => ENCODER_4_2:EN1.B
+Y2 => ENCODER_4_2:EN3.B
+Y1 => ENCODER_4_2:EN1.C
+Y1 => ENCODER_4_2:EN3.C
+Y0 => ENCODER_4_2:EN1.D
+Y0 => ENCODER_4_2:EN3.D
+E => ENCODER_4_2:EN1.E
+E => ENCODER_4_2:EN2.E
+E => AND_2:AND1.B
+A2 <= AND_2:AND1.Y
+A1 <= OR_2:OR4.Y
+A0 <= OR_2:OR3.Y
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN1
+A => OR_2:OR1.A
+A => OR_2:OR2.A
+B => OR_2:OR2.B
+C => OR_2:OR1.B
+D => ~NO_FANOUT~
+E => AND_2:AND1.B
+E => AND_2:AND2.B
+Y0 <= AND_2:AND1.Y
+Y1 <= AND_2:AND2.Y
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN1|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN1|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN2
+A => OR_2:OR1.A
+A => OR_2:OR2.A
+B => OR_2:OR2.B
+C => OR_2:OR1.B
+D => ~NO_FANOUT~
+E => AND_2:AND1.B
+E => AND_2:AND2.B
+Y0 <= AND_2:AND1.Y
+Y1 <= AND_2:AND2.Y
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN2|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN2|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN3
+A => OR_2:OR1.A
+A => OR_2:OR2.A
+B => OR_2:OR2.B
+C => OR_2:OR1.B
+D => ~NO_FANOUT~
+E => AND_2:AND1.B
+E => AND_2:AND2.B
+Y0 <= AND_2:AND1.Y
+Y1 <= AND_2:AND2.Y
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN3|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN3|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN3|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN3|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN4
+A => OR_2:OR1.A
+A => OR_2:OR2.A
+B => OR_2:OR2.B
+C => OR_2:OR1.B
+D => ~NO_FANOUT~
+E => AND_2:AND1.B
+E => AND_2:AND2.B
+Y0 <= AND_2:AND1.Y
+Y1 <= AND_2:AND2.Y
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN4|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN4|OR_2:OR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN4|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|ENCODER_4_2:EN4|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|OR_2:OR3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|OR_2:OR4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|OR_2:OR5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|ENCODER_8_3:add_instance|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

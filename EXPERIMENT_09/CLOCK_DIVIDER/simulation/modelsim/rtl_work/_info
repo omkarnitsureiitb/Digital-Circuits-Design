@@ -1,0 +1,95 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/simulation/modelsim
+Eclock_divider
+Z1 w1665671621
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8E:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/clock_divider.vhd
+Z6 FE:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/clock_divider.vhd
+l0
+L5 1
+VoSTS9XE?NnYHC0Y0bakmc0
+!s100 ;g@d2eo77`afjzKgQ5eBm2
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1666635753
+!i10b 1
+Z9 !s108 1666635753.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|E:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/clock_divider.vhd|
+Z11 !s107 E:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/clock_divider.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+R4
+DEx4 work 13 clock_divider 0 22 oSTS9XE?NnYHC0Y0bakmc0
+!i122 0
+l14
+L10 38
+Vz:d=WeE0DZzhaRK`Za]_S1
+!s100 0cbdjzKm:0=N]VO^:]AQB0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eclock_divider_tb
+Z14 w1665656962
+R3
+R4
+!i122 1
+R0
+Z15 8E:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/clock_divider_tb.vhd
+Z16 FE:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/clock_divider_tb.vhd
+l0
+L4 1
+V119iRA8:_b7Ec7RSW;:3<2
+!s100 d?TOnS<B_9l]N`OC<=1lJ0
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|E:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/clock_divider_tb.vhd|
+!s107 E:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/clock_divider_tb.vhd|
+!i113 1
+R12
+R13
+Abhv
+R3
+R4
+DEx4 work 16 clock_divider_tb 0 22 119iRA8:_b7Ec7RSW;:3<2
+!i122 1
+l16
+L7 15
+VD@TRY9jglUZVn0oPB<_?[0
+!s100 CaW0aS>l[PHb9DibnT`Mo0
+R7
+31
+R8
+!i10b 1
+R9
+R17
+Z18 !s107 E:/EE214/EXPERIMENTS/EXPERIMENT_09/CLOCK_DIVIDER/clock_divider_tb.vhd|
+!i113 1
+R12
+R13

@@ -1,0 +1,12 @@
+|DUT
+input_vector[0] => SEQUENCE_GENERATOR:add_instance.clock
+input_vector[1] => SEQUENCE_GENERATOR:add_instance.reset
+output_vector[0] << SEQUENCE_GENERATOR:add_instance.output
+
+
+|DUT|SEQUENCE_GENERATOR:add_instance
+reset => y_present~7.DATAIN
+clock => y_present~5.DATAIN
+output <= <VCC>
+
+

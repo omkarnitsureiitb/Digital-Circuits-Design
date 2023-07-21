@@ -1,0 +1,161 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup '\output_proc:ending'
+Slack : -8.017
+TNS   : -39.105
+
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -5.745
+TNS   : -149.368
+
+Type  : Slow 1200mV 85C Model Setup 'y_present.admin_619'
+Slack : -5.626
+TNS   : -17.059
+
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 0.711
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold '\output_proc:ending'
+Slack : 1.275
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'y_present.admin_619'
+Slack : 1.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'y_present.admin_619'
+Slack : -4.522
+TNS   : -4.522
+
+Type  : Slow 1200mV 85C Model Recovery 'clock'
+Slack : -2.692
+TNS   : -13.458
+
+Type  : Slow 1200mV 85C Model Removal 'clock'
+Slack : 0.821
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'y_present.admin_619'
+Slack : 3.709
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -59.506
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width '\output_proc:ending'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'y_present.admin_619'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup '\output_proc:ending'
+Slack : -7.691
+TNS   : -37.071
+
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -5.361
+TNS   : -137.561
+
+Type  : Slow 1200mV 0C Model Setup 'y_present.admin_619'
+Slack : -5.124
+TNS   : -15.971
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.671
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold '\output_proc:ending'
+Slack : 1.128
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'y_present.admin_619'
+Slack : 1.236
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'y_present.admin_619'
+Slack : -4.093
+TNS   : -4.093
+
+Type  : Slow 1200mV 0C Model Recovery 'clock'
+Slack : -2.517
+TNS   : -12.579
+
+Type  : Slow 1200mV 0C Model Removal 'clock'
+Slack : 0.778
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'y_present.admin_619'
+Slack : 3.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -59.506
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width '\output_proc:ending'
+Slack : 0.256
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'y_present.admin_619'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup '\output_proc:ending'
+Slack : -2.524
+TNS   : -12.206
+
+Type  : Fast 1200mV 0C Model Setup 'y_present.admin_619'
+Slack : -1.818
+TNS   : -3.648
+
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -1.634
+TNS   : -42.099
+
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold '\output_proc:ending'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'y_present.admin_619'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'y_present.admin_619'
+Slack : -1.409
+TNS   : -1.409
+
+Type  : Fast 1200mV 0C Model Recovery 'clock'
+Slack : -0.817
+TNS   : -4.083
+
+Type  : Fast 1200mV 0C Model Removal 'clock'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'y_present.admin_619'
+Slack : 1.673
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -42.197
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'y_present.admin_619'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width '\output_proc:ending'
+Slack : 0.358
+TNS   : 0.000
+
+------------------------------------------------------------
